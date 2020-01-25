@@ -1,0 +1,136 @@
+/*
+For any quries, imakhil@ieee.org
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans:400,600&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    width: 210mm;
+    border: 1px solid rgba(143, 143, 143, 0.253);
+    margin: 100px auto;
+    padding: 15px;
+    box-shadow: ;
+}
+
+main.invoice{
+    width: 210mm;
+}
+
+
+/* Invoice Header */
+
+main.invoice header{
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    margin: 0 15mm;
+    margin-bottom: 5mm;
+}
+
+main.invoice header .logo img{
+    width: 100px;
+}
+
+main.invoice header h2{
+    font-size: 1.4em;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 200;
+    margin-top: 9mm;
+}
+
+main.invoice header h3{
+    font-size: 0.8em;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 200;
+}
+
+
+/* Invoice Details */
+
+main.invoice section.details{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5mm 16mm;
+    font-family: 'Open Sans', serif;
+    font-size: 0.9em;
+    text-align: center;
+    margin-bottom: 5mm;
+}
+
+main.invoice section.details div .title{
+    font-weight: 600;
+}
+
+
+/* Invoice Table */
+
+main.invoice table{
+    border: none;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Open Sans', serif;
+    font-size: 0.9em;
+}
+
+main.invoice table .table-heading{
+    background: #b01c20 !important;
+    color: #ffffff;
+    height: 8mm;
+    font-weight: 600;
+}
+
+main.invoice table tr{
+    height: 8mm;
+    text-align: center;
+}
+
+main.invoice table tr:nth-child(odd){
+    background-color: #e4e4e4;
+}
+
+main.invoice table tr.total{
+    background-color: #ffffff;
+}
+
+main.invoice table td.total{
+    font-weight: bolder;
+}
+
+
+/* Footer */
+footer{
+    margin-top: 30px;
+    font-size: 0.8em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Print View */
+@media print{
+    body{
+        padding: 0;
+        border: none;
+        margin: 0 auto;
+    }
+
+    table, th,td{
+        border: 1px solid black;
+    }
+
+    main.invoice table .table-heading{
+        background: #ffffff;
+        color: black;
+    }
+
+    footer{
+        position: absolute;
+        bottom: 1mm;
+        left: 0.5mm;
+    }
+
+}  
